@@ -1,0 +1,679 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Saṅgīti Sutta (’Chanting Together’ LUSB Standardized Ed.)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="f9f5d821-3307-4ae7-b981-5142b42c2dd8" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📜</span></div><h1 class="page-title">Saṅgīti Sutta (’Chanting Together’ LUSB Standardized Ed.)</h1><p class="page-description"></p></header><div class="page-body"><h1 id="a6ce93e0-3c29-497c-9259-7a2ac1c01588" class=""><strong>眾集經</strong></h1><p id="0baab282-4d98-4be8-a1ca-12ea7083e909" class="">‘Gathered Together’ Sutra</p><p id="a727078d-0ddc-4f74-a195-d44078ed688c" class="">
+</p><h3 id="bbda3f94-9b0d-48f4-845f-3e22f3f3c42e" class="">如是我聞：</h3><p id="7ec8ae7d-0ef2-4e2b-93be-61653a830627" class="">Thus have I heard: </p><h3 id="014d7e82-ac8b-4280-9465-99a7255ef100" class="">一時，佛於末羅遊行，與千二百 五十比丘俱，漸至波婆城闍頭菴婆園。</h3><p id="cd345b7a-249c-463e-972c-08fc03385432" class="">One time the Buddha was in Malaya with twelve-hundred fifty <em>bhikṣus</em>, eventually arriving at Cunda’s Mango Grove in the city of Pāpā.  </p><h3 id="1ec75fd4-f959-4c68-b4ab-c783c0294b4f" class="">爾時，世尊以十五日月滿時，於露地坐，諸 比丘僧前後圍繞。世尊於夜多說法已，告 舍利弗言：「今者四方諸比丘集，皆共精勤， 捐除睡眠，吾患背痛，欲暫止息，汝今可為 諸比丘說法。」</h3><p id="f3cb560e-7c3f-422a-8d1c-0d28ba2bdec3" class="">At that time, on the fifteenth-day full moon when the World-Honored One sat in an open area with the assembly of monks both in front and behind him. After he had given them many discourses on the Dharma that evening, the Bhagavān addressed Śāriputra, “The monks have gathered today from the four directions to diligently apply themselves together. They aren’t sleepy yet, but I’m suffering from back pain. I’d like to take a break for a while. Perhaps you can explain the Dharma for the monks now?”</p><h3 id="1630c901-41d6-4091-983f-cdb6fa153c2a" class="">對曰：「唯然！當如聖教。」</h3><p id="ed70adfb-2c25-4ff8-8321-5f96d8abeb26" class="">[Śāriputra] replied saying: “So be it! I’ll explain the noble teaching.</p><h3 id="bec2f4ca-b5d3-48b6-8dae-bc36f1eb5f7a" class="">爾時，世尊即四牒僧伽梨，偃右脇如師子，累足 而臥。</h3><p id="d05cb6da-7010-4fbc-b812-b53a3654c92d" class="">At that time, the World-Honored One folded his outer robe four times and laid on his right side like a lion with his feet together.</p><h3 id="80d1e462-dfeb-43d4-82c7-d581a931ca4e" class="">時，舍利弗告諸比丘：「今此波婆城有 尼乾子命終未久，其後弟子分為二部， 常共諍訟相求長短，迭相罵詈，各相是非：『我 知此法，汝不知此；汝在邪見，我在正法。 言語錯亂，無有前後。』自稱己言，以為真正。 『我所言勝，汝所言負，我今能為談論之主， 汝有所問，可來問我。』</h3><p id="fadea03f-7859-48df-9344-9178933abb25" class="">Then, Śāriputra then told the <em>bhikṣu</em>s, “Now, here in this city of Pāpā, it hasn’t been long since Nirgrantha Jñātaputra’s life ended. Since then, his disciples have split into two factions that constantly argue and look for shortcomings to reproach each other. They contradict each other, saying: ‘I know this teaching.’ ‘You don’t know this.’ ‘You hold wrong views.’ ‘I hold to the right teaching.’ Their words are confused and without proper order. They consider statements praising themselves to be true, saying: ‘My statement is the winner; your words are defeated. I’m the one who gives discourses now. Come and ask me when you have questions.’</p><h3 id="c19dafea-3d92-4216-8cf0-e7f05ef16603" class="">「諸比丘！時，國人民奉 尼乾者，厭患此輩鬪訟之聲，皆由其法不 真正故；法不真正無由出要，譬如 朽 塔 不可復圬，此非三耶三佛所說。諸比丘！ 唯我釋迦無上尊法，最為真正可得出要， 譬如新塔易可嚴飾，此是三耶三佛之所 說也。諸比丘！我等今者，宜集法、律，以防諍 訟，使梵行久立，多所饒益，天、人獲安。諸比 丘！如來說一正法，一切眾生皆仰食存。如來所說復有一法，一切眾生皆由行往，是 為一法如來所說，當共集之，以防諍訟，使 梵行久立，多 所 饒益，天、人獲安。</h3><p id="0035fe71-ed6f-4951-86af-01597a3a40be" class="">“<em>Bhikṣu</em>s!  Now the people of the country who make offerings to the Nirgranthas are weary and troubled by the noise of their fighting. As a result, they consider their teaching to be untrue. A teaching that’s untrue has no way to escape, just as a ruined shrine cannot be repainted. It’s not the teaching of a Buddha. <em>Bhikṣu</em>s! only we Śākyans have the unsurpassed, noble Dharma that is the truest and can lead to the escape, just as a newly built shrine is easily decorated. It’s the teaching of a completely awakened one. <em>Bhikṣu</em>s! Today, we ought to collect the Dharma and Vinaya to safeguard them from disputes, establish the religious life for a long time, and benefit many people so that gods and humans will obtain peace. </p><p id="103b0175-548f-48dd-ac9e-eb218e214f2b" class=""><em>Bhikṣu</em>s! The Tathāgata teaches one correct Dharma: </p><p id="ac914fd6-1981-4755-9bf2-83a1d7d85474" class="">1. All sentient beings look to food (<em>āhāra</em>) for their sustenance (<em>āhāraṭṭhitikā</em>). </p><p id="309df0cc-c2c5-4358-ac8a-f5d7df5f5974" class="">The Tathāgata has taught one other single Dharma: </p><p id="801d9903-8cd7-4edc-a9ad-c537f60b9258" class="">2. All sentient beings are reborn as a result of their actions (<em>saṅkhāraṭṭhitikā</em>). </p><p id="758282a6-13ae-49e2-8a4e-145343388326" class="">These are single Dharmas taught by the Tathāgata that we ought to collect to safeguard them from dispute, establish the religious life for a long time, and benefit many people so that gods and people will obtain peace.”</p><h3 id="b727e849-719e-4177-893a-aecbcb146e3b" class="">「諸比丘！如來說二正法：一名，二色。復有二法：一癡，二 愛。復有二法：有見、無見。復有二法：一無慚， 二無愧。復有二法：一有慚，二有愧。復有二 法：一盡智，二無生智。復有二法，二因二緣生 於欲愛：一者淨妙色，二者不思惟。復有二法， 二因二緣生於瞋恚：一者怨憎，二者不思惟。 復有二法，二因二緣生於邪見：一者從他 聞，二者邪思惟。復有二法，二因二緣生於正見：一者從他聞，二者正思惟。復有二法，二 因二緣：一者學解脫，二者無學解脫。復有 二法，二因二緣：一者有為界，二者無為界。諸 比丘！是為如來所說，當共撰集以防諍訟， 使梵行久立，多所饒益，天、人獲安。</h3><p id="bdb49a61-8c3d-4c43-a6c0-69c37dbe4f93" class=""><em>“Bhikṣu</em>s! The Tathāgata teaches two correct Dharmas: </p><p id="67b2e5ac-6379-4e24-b003-18b84363bf85" class="">1. One is name (<em>nāma</em>), and the second is form (<em>rūpa</em>). </p><p id="d94dd118-1b6c-443d-8586-0465bfed799d" class="">2. There are another two things: One is delusion (<em>avidyā</em>), and the second is craving [for existence](<em>bhavataṇhā</em>). </p><p id="862710fe-fb6b-4b2a-a605-ceaf3d272c8a" class="">3. There are another two things: The view of existence (<em>bhāva-dṛṣṭi</em>) and view of non-existence (<em>vibhāva-dṛṣṭi</em>). </p><p id="75ce4380-2789-413b-bb4b-7d2188edf171" class="">4. There are another two things: One is lacking conscience (<em>āhrīkya</em>), and the second is lacking modesty (<em>anapatrapā</em>). </p><p id="ec56760f-1515-42e2-9169-b63f1020996a" class="">5. There are another two things: One is having conscience (<em>hiri</em>), and the second is having modesty (<em>otrāpya</em>). </p><p id="a2362a87-7ce4-4612-9019-69dd41c04751" class="">6. There are another two things: One is knowledge of the destruction [of the defilements], and the second is knowledge of [their] non-recurrence. </p><p id="8a04feb2-d786-4c75-b43c-88d7198fb337" class="">7. There are another two things, which are two causes and two conditions that give rise to craving: One is pure and sublime form, and the second is inattention. </p><p id="41b6889c-9f60-4628-acc9-d1ca2568edeb" class="">8. There are another two things, which are two causes and two conditions that give rise to anger: One is hatred, and the second is inattention. </p><p id="fcb00ccd-10ca-49ce-98b5-ba3065f433f8" class="">9. There are another two things, which are two causes and two conditions that give rise to wrong view: One is hearing it from others, and the second is wrong thought. </p><p id="75e21728-7372-4a89-85e8-961f414e3dfc" class="">10. There are another two things, which are two causes and two conditions that give rise to right view: One is hearing it from others, and the second is right thought. </p><p id="b98c8ce4-601a-468b-9f41-559e5236c730" class="">11. There are another two things, which are two causes and two conditions: One is learning about liberation, and the second is having nothing more to learn about liberation. </p><p id="5f571f46-5fb0-4f65-9436-b3de6604b727" class="">12. There are another two things, which are two causes and two conditions: One is the conditioned element, and the second is the unconditioned element. </p><p id="aba3b1b3-1842-4c17-9a2d-1ce03f2d3e0f" class=""><em>Bhikṣu</em>s! These are the sets of two taught by the Tathāgata that we ought to collect to safeguard them from dispute, establish the religious life for a long time, and benefit many people so that gods and people will obtain peace.”</p><h3 id="161f6cb2-8d49-46ed-9343-1b3c6419ed32" class="">「諸比丘！ 如來說三正法，謂三不善根：一者貪欲，二者 瞋恚，三者愚癡。復有三法，謂三善根：一者不貪，二者不恚，三者不癡。復有三法，謂三不善行：一者不善身行，二者不善口行，三者 不善意行。復有三法，謂三不善行：身不善行、口不善行、意不善行。復有三法，謂三惡行： 身惡行、口惡行、意惡行。復有三法，謂三善行： 身善行、口善行、意善行。復有三法，謂三不善想：欲想、瞋想、害想。復有三法，謂三善想：無欲想、無瞋想、無害想。復有三法，謂三不善思： 欲思、恚思、害思。復有三法，謂三善思：無欲思、 無恚思、無害思。</h3><p id="a79784f1-b5d7-44ee-b673-bdc8713f8bed" class="">“<em>Bhikṣu</em>s! The Tathāgata has taught three correct things, which are known as three roots of what’s not good: </p><p id="976c36e8-6e89-4505-b7f5-f92c829938e7" class="">1. First is craving (<em>rāga</em>), second is anger (<em>dveṣa</em>), and third is delusion (<em>moha</em>). </p><p id="aefb3839-e4a4-4ca4-917c-9a2651deeb18" class="">2. There are another three things, which are known as three roots of goodness: First is not craving, second is not being angry, and third is not being deluded. </p><p id="0f23c1fc-06b1-4d4b-a2db-84df27b01625" class="">3. There are another three things, which are known as unskillful practices: First is unskillful physical conduct, second is unskillful verbal conduct, and third is unskillful mental conduct. </p><p id="da320ec6-77d0-4048-988d-bf4241ca3fdf" class="">4. There are another three things, which are known as three unskillful practices: First is physical unskillful conduct, second is verbal unskillful conduct, and third is mental unskillful conduct. </p><p id="aa7c5091-ca4b-4303-931e-3cb14d6ac9e0" class="">5. There are another three things, which are three bad practices: Physical bad conduct, verbal bad conduct, and mental bad conduct. </p><p id="d11252bb-afc9-4932-b2db-b0ac6e485d9c" class="">6. There are another three things, which are three good practices: Physical good conduct, verbal good conduct, and mental good conduct. </p><p id="9f0f071b-23f0-42e6-aa58-af2a15303049" class="">7. There are another three things, which are three unskillful notions (<em>saṃjñā</em>): Notions of desire, Notions of anger, and notions of harmfulness (<em>hiṃsā</em>). </p><p id="578fe34e-46a1-47fe-b752-7d662b8260f4" class="">8. There are another three things, which are three good notions: Notions without desire, notions without anger, and notions without harmfulness. </p><p id="96f4551d-4880-455d-a92b-aaaf9a773ca1" class="">9. There are another three things, which are three unskillful intentions: Intentions of desire, intentions of anger, and intentions of harmfulness. </p><p id="c1af653b-ff20-4758-89ea-ad0024d18fc5" class="">10. There are another three things, which are three good intentions: Intentions without desire, intentions without anger, and intentions without harmfulness. </p><h3 id="44f2e325-df93-4b7f-8751-73581e82f309" class="">「復有三法，謂三福業：施業、平等業、思惟業。復有三法，謂三受：樂受、苦受、不 苦不樂受。復有三法，謂三愛：欲愛、有愛、無 有愛。復有三法，謂三有漏：欲漏、有漏、無明 漏。復有三法，謂三火：欲火、恚火、愚癡火。復有三法，謂三求：欲求、有求、梵行求。復有三法，謂三增盛：我增盛、世增盛、法增盛。復有三法，謂三界：欲界、恚界、害界。復有三法，謂三界：出離界、無恚界、無害界。復有三法，謂三界：色界、無色界、盡界。復有三法，謂三聚：戒 聚、定聚、慧聚。復有三法，謂三戒：增盛戒、增盛意、增盛慧。</h3><p id="c73b34e5-b6bb-4f55-a1c3-5444630427a6" class="">11. “There are another three things, which are three meritorious acts: The act of giving, act of impartiality, and act of contemplation. </p><p id="96dc6c79-5d9b-466a-93f8-cd8d70c51577" class="">12. There are another three things, which are three feelings (<em>vedanā</em>): Pleasant feelings, painful feelings, and neither pleasant nor painful feelings. </p><p id="647beb76-6148-4632-935d-9514f2c04e90" class="">13. There are another three things, which are three cravings: Craving for desires, craving for existence, and craving for non-existence. </p><p id="66f14207-ca1d-4b5e-bfd4-35140f3e0564" class="">14. There are another three things, which are three contaminations: Contaminants of desire, contaminants of existence, and contaminants of ignorance. </p><p id="93fb9e0a-8f7a-458d-8db5-f0d9ef1a4e93" class="">15. There are another three things, which are three fires: The fire of desire, fire of anger, and fire of delusion. </p><p id="8c0080c6-0278-44ee-84d9-6c01f6ab3956" class="">16. There are another three things, which are three pursuits: The pursuit of desire, pursuit of existence, and pursuit of the religious life. </p><p id="5654928d-835e-4582-a0b9-753704529c26" class="">17. There are another three things, which are three growths: The growth of self, growth of the world, and growth of Dharma. </p><p id="504bf35f-8a56-4e9b-897f-5196fe2c2078" class="">18. There are another three things, which are three realms (<em>dhātu</em>): The realm of desire, realm of anger, and realm of harmfulness. </p><p id="d44a9fba-0cf4-4c05-b175-92015ab24a71" class="">19. There are another three things, which are three realm: The realm of escape, the realm lacking anger, and the realm lacking harmfulness. </p><p id="1bea72a2-44c0-4f79-9712-812531927bbf" class="">20. There are another three things, which are three realms: The realm of form, the realm of formlessness, and the realm of cessation (<em>nirodha</em>). </p><p id="f294c43e-82a9-4328-9486-260cebb97cc0" class="">21. There are another three things, which are three categories: The category of disicpline, the category of concentration, and the category of wisdom. </p><p id="67234970-3cc6-4cac-9c48-be5cb860c00c" class="">22. There are another three things, which are three precepts: Increasing discipline, increasing mind, and increasing wisdom.</p><h3 id="0eea5bcb-67af-46fb-9193-5039965838af" class="">「復有三法，謂三三昧：空三昧、無 願三昧、無相三昧。復有三法，謂三相：止息相、 精勤相、捨相。復有三法，謂三明：自識宿命智 明、天眼智明、漏盡智明。復有三法，謂三變化：一者神足變化，二者知他心隨意說法，三 者教誡。復有三法，謂三欲生本：一者由現 欲生人天，二者由化欲生化自在天，三者由他化欲生他化自在天。復有三法，謂三樂生：一者眾生自然成辦，生歡樂心，如梵光 音天初始生時。二者有眾生以念為樂，自 唱善哉，如光音天。三者得止息樂，如遍淨天。</h3><p id="57a89231-bd59-4dbc-9c5e-904efc0d46c6" class="">23. “There are another three things, which are three samādhis: The samādhi of emptiness, samādhi without aspirations, and samādhi without attributes.</p><p id="f4b1b766-3b7b-435f-b1b3-0f26d496813a" class="">24. There are another three things, which are three characteristics: The characteristic of calm, characteristic of diligence, and characteristic of equanimity. </p><p id="9d16e3ce-341a-4bf5-9f96-9963d6ccaaf5" class="">25. There are another three things, which are three insights: The insight that’s the knowledge of one’s own past lives, the insight that’s the knowledge of the heavenly eye, and the insight that’s the knowledge of the contaminants being ended.</p><p id="c7cb5235-bdc7-4b6f-91a2-20e98ea8e60c" class="">26. There are another three things, which are three transformations: First is the spiritual ability of transformation, second is knowing another’s mind and explaining the teaching as they wish, and third is teaching. </p><p id="c47d1d48-9ccb-4ae8-a5b1-e7336e973a9c" class="">27. There are another three things, which are three roots of desiring birth: First is being born as a human or god as a result of present desire, second is being born in the Nirmāṇarati Heaven as a result of desiring transformation, and third is being born in the Paranirmitavaśavartin Heaven because of desiring the transformation of others.</p><p id="4166c3a2-648a-424f-a6a7-8bfe10a7b355" class="">28. There are another three things, which are three things that create comfort: First is happiness that arises from the natural accomplishments of sentient beings, such as when the Ābhāsvara gods are first born. Second is that some sentient beings consider thought to be pleasant and declare it ‘Good!’ like the Ābhāsvara gods. Third is the pleasure that’s attained from calmness like the Śubhakṛtsnā gods.”</p><h3 id="89f3e367-4fe0-4515-b744-cbea719d15ba" class="">「復有三法，謂三苦：行苦、苦苦、變易苦。復有三法，謂三根：未知欲知根、知根、知已根。 復有三法，謂三堂：賢聖堂、天堂、梵堂。復有 三法，謂三發：見發、聞發、疑發。復有三法，謂三論：過去有如此事，有如是論；未來有 如此事，有如是論；現在有如此事，有如 是論。復有三法，謂三聚：正定聚、邪定聚、不定聚。復有三法，謂三憂：身憂、口憂、意憂。復有 三法，謂三長老：年耆長老、法長老、作長老。復 有三法，謂三眼：肉眼、天眼、慧眼。諸比丘！是 為如來所說正法，當共撰集，以防諍訟，使 梵行久立，多所饒益，天、人獲安。</h3><p id="4c8f7c09-17b7-4c10-b691-cfc150501d9c" class="">29. “There are another three things, which are three sufferings: The suffering of conditioning (<em>saṃskāra-dukkhatā</em>), the suffering of suffering (<em>dukkha-dukkhatā</em>), and the suffering of change (<em>vipariṇāma-dukkhatā</em>). </p><p id="b0ca34e7-e660-46b7-8f47-85c6a109ebf1" class="">30. There are another three things, which are three faculties: The faculty of wanting to know what’s yet to be known, faculty of knowing, and faculty of having known.</p><p id="24665e2e-f30b-4802-a7cf-288d92e039b6" class="">31. There are another three things, which are three palaces: The palace of nobles, heavenly palaces, and Brahma palaces.</p><p id="42921588-bb0d-4282-9620-51e7fced2332" class="">32. There are another three things, which are three issuances [of rebuke]: Issuance regarding what’s seen, issuance regarding what’s heard, and issuance regarding doubts.</p><p id="07954b5b-42fc-42a2-8ba1-643fe5ed2738" class="">33. There are another three things, which are three discussions: There are discussions such as: ‘The past had such events as these.’ There are discussions such as: ‘The future will have such events as these.’ There are discussions such as: ‘The present has such events as these.’</p><p id="33f79767-efc0-4abc-bcf4-3d16e185ee43" class="">34. There are another three things, which are three categories: The category of right samādhi, category of wrong samādhi, and the category of what is not samādhi.</p><p id="cb01ed8e-b368-4f97-894b-2371df921e0c" class="">35. There are another three things, which are three sorrows: Physical sorrow, verbal sorrow, and mental sorrow.</p><p id="6afbb8ac-8810-477d-b215-d05329c93ee7" class="">36. There are another three things, which are three seniorities: Seniority in years, seniority in Dharma, and seniority in accomplishment. </p><p id="2d49089f-4bca-489d-898c-629b242fc6b8" class="">37. There are another three things, which are three eyes: The flesh eye (<em>māṃsacakṣus</em>), heavenly eye (<em>divyacakṣus</em>), and wisdom eye (<em>prājñācakṣus</em>).</p><p id="ad298b18-e614-46c2-9392-c75221d9af6b" class=""><em>Bhikṣu</em>s! These are the correct teachings taught by the Tathāgata that we ought to compile together to safeguard them from dispute, establish the religious life for a long time, and benefit many people so that gods and people will obtain peace.</p><h3 id="9abd8bbc-6adc-427d-aa80-8fd99f63c3e9" class="">「諸比丘！如來說四正法，謂口四惡行：一者妄語，二者兩舌，三者惡口，四者綺語。復有四法，謂口四 善行：一者實語，二者軟語，三者不綺語，四者 不兩舌。</h3><p id="31ed1020-e62c-45ea-b18d-425c05b54377" class="">“<em>Bhikṣu</em>s! The Tathāgata has taught four correct things, which are four verbal bad practices: </p><p id="91eeb3f4-8200-4ede-be85-b77f5bc7e073" class="">1. First is false speech, second is duplicity, third is harsh speech, and fourth is frivolous speech.</p><p id="60994da3-3097-4317-bc5f-25946f17b532" class="">2, There are another four things, which are four verbal good practices: First is truthful speech, second is gentle speech, third is speech that isn’t frivolous, and fourth is speech that isn’t duplicitous.</p><h3 id="c6651191-5d17-45e4-9152-2e44f39b379b" class="">「復有四法，謂四不聖語：不見言見， 不聞言聞，不覺言覺，不知言知。復有四法， 謂四聖語：見則言見，聞則言聞，覺則言覺， 知則言知。復有四法，謂四種食：摶食、觸食、 念食、識食。復有四法，謂四受：有現作苦行 後受苦報；有現作苦行後受樂報；有現作樂 行後受苦報；有現作樂行後受樂報。復有四 法，謂四受：欲受、我受、戒受、見受。復有四法， 謂四縛：貪欲身縛、瞋恚身縛、戒盜身縛、我見身縛。</h3><p id="c2c56d8b-a111-4eee-bc35-f9795c4735d6" class="">3. “There are another four things, which are four ignoble kinds of speech: Claiming to have seen what wasn’t seen, claiming to have heard what wasn’t heard, claiming to have perceived what wasn’t perceived, and claiming to have known what wasn’t known.</p><p id="a4150f03-41ed-4a01-b3f3-70081e264140" class="">4. There are another four things, which are four noble kinds of speech: Claiming to have seen what was seen, claiming to have heard what was heard, claiming to have perceived what was perceived, and claiming to have known what was known. </p><p id="77f2aec1-401f-4cb3-8cb8-12a98b8f854d" class="">5. There are another four things, which are four kinds of food (sustenance; <em>āhāra</em>): physical food, food of contact, food of thought, and food of consciousness.</p><p id="434ca847-603a-4332-91f8-b77707831281" class="">6. There are another four things, which are four feelings: Doing something painful in the present and later feeling pain as a result. Doing something painful in the present and later feeling pleasure as a result. Doing something pleasant in the present and later feeling pain as a result. Doing something pleasant in the present and feeling pleasure as a result.</p><p id="86874f8a-7877-4acf-9a11-8109489b7760" class="">7. There are another four things, which are four acquisitions: Acquisition of desire, acquisition of self, acquisition of precepts, and acquisition of views.</p><p id="24960c4f-c72d-4b3d-96c8-3834fe8dce15" class="">8. There are another four things, which are four bonds (<em>bandhana</em>): the body bound by desire, the body bound by anger, the body bound by misapplied precepts, and the body bound by the view of a self.</p><h3 id="e22aa661-8086-4bb6-9aeb-f31a51b49a67" class="">「復有四法，謂四刺：欲刺、恚刺、見刺、慢 刺。復有四法，謂四生：卵生、胎生、濕生、化生。 復有四法，謂四念處；於是，比丘內身身觀， 精勤不懈，憶念不忘，捨世貪憂；外身身觀， 精勤不懈，憶念不忘，捨世貪憂；內外身身 觀，精勤不懈，憶念不忘，捨世貪憂。受、意、法觀，亦復如是。復有四法，謂四意斷；於是，比丘未起惡法，方便使不起；已起惡法，方便 使滅；未起善法，方便使起；已起善法，方便思惟，使其增廣。</h3><p id="a103c68d-5e67-4a27-a690-0b91ff26c4b0" class="">9. There are another four things, which are four thorns: The thorn of desire, thorn of anger, thorn of views, and thorn of arrogance.</p><p id="1a3a84dc-4ed3-48c7-a1c8-dbe39b96d3a5" class="">10. There are another four things, which are four births: Birth from an egg, birth from a womb, birth from moisture, and transformational birth.</p><p id="303d3d9b-2396-40f4-b7e6-89afc61835b5" class="">11. There are another four things, which are the four foundations of mindfulness: [1] Here, a <em>bhikṣu </em>observes internal body as body diligently and not negligently; mindful, not forgetful, casting off worldly craving and sadness. They observe the external body as body diligently and not negligently; mindful, not forgetful, casting off worldly craving and sadness. They observe the internal and external body as body diligently and not negligently; mindful, not forgetful, casting off worldly craving and sadness. <em>They observe [2] feelings, [3] mind, and [4] dharmas.</em></p><p id="47e8cccb-14f5-4ca5-99b7-95a43216b6a6" class="">12. There are another four things, which are the four mental severances (i.e. the ‘four right efforts’): Here, a <em>bhikṣu </em>applies effort to make bad qualities that have yet to arise to not arise … applies effort to make bad qualities that have arisen to cease … applies effort to make good qualities that have yet to arise to arise … applies effort to make good qualities that have arisen to increase.</p><h3 id="228c9872-b686-40e4-8c05-adf92184f469" class="">「復有四法，謂四神足；於是，比丘思惟欲定滅行成就；精進定、意定、思惟定， 亦復如是。復有四法，謂四禪；於是，比丘除欲、惡不善法，有覺、有觀，離生喜、樂，入於初禪。滅有覺、觀，內信、一心，無覺、無觀，定生喜、樂， 入第二禪。離喜修捨、念、進，自知身樂，諸聖 所求，憶念、捨、樂，入第三禪。離苦、樂行，先滅 憂、喜、不苦不樂、捨、念、清淨，入第四禪。復有 四法，謂四梵堂：一慈、二悲、三喜、四捨。復有四法，謂四無色定；於是，比丘越一切色想， 先盡瞋恚想，不念異想，思惟無量空處， 捨空處已入識處，捨識處已入不用處， 捨不用處已入有想無想處。</h3><p id="c1f9ffe5-196e-44ce-84b2-be70306ee5b2" class="">13. There are another four things, which are the four miraculous abilities (’spiritual steps’ <em>ṛddhipāda) </em>[1] Here, a <em>bhikṣu </em>sets their intention (<em>saṃkalpa</em>) upon the samādhi of desire and accomplishes the cessation of conditioning (<em>saṁskāra</em>). <em>[2] The samādhi of effort, [3] samādhi of mind, and [3] samādhi of contemplation are likewise.</em></p><p id="d474379f-9ab2-4f23-ac9c-b14587c66151" class="">14. There are another four things, which are the four <em>dhyānas</em>: Here, a <em>bhikṣu </em>rids themselves of desire and bad and unskillful things. With perception and examination, this seclusion gives rise to joy and happiness, and they enter the first <em>dhyāna</em>. They cease having perception and examination. With inner belief and unified mind, they have no perception or examination. This samādhi gives rise to joy and happiness, and they enter the second <em>dhyāna</em>. Parting with joy, they cultivate equanimity, mindfulness, and effort, knowing the happiness sought by the noble ones. Mindful, detached, and happy, they enter the third <em>dhyāna</em>. Parting with painful and pleasant formations (<em>saṁskāra</em>), previous sorrow and joy ceases. Neither discomforted nor happy, detached, mindful, and pure, they enter the fourth <em>dhyāna</em>. </p><p id="63f12e6f-af39-4488-b78e-3fe00d338b82" class="">15. There are another four things, which are four Brahma temples (<em>vihāra</em>): First is kindness, second is compassion, third is joy, and fourth is equanimity.</p><p id="d8d6d7a7-fb14-4f1a-ab18-2a9acadf6a68" class="">16. There are another four things, which are four formless samādhis: [1] Here, a <em>bhikṣu </em>goes beyond all notions of form, and all previous notions of anger. Not being mindful of different notions, they contemplate the abode of measureless space. [2] Abandoning the abode of space, they enter the abode of consciousness. [3] Abandoning the abode of consciousness, they enter the abode of nothingness. [4] Abandoning the abode of nothingness, they enter the abode neither perception nor non-perception.</p><h3 id="adaab127-f995-40ab-b603-58728d2683f9" class="">「復有四法，謂四法足：不貪法足、不瞋法足、正念法足、正定法足。復有四法，謂四賢聖族；於是，比丘衣服知足，得好不喜，遇惡不憂，不染不著， 知所禁忌，知出要路，於此法中精勤不 懈，成辦其事，無闕無減，亦能教人成辦此事，是為第一知足住賢聖族。從本至今，未常惱亂；諸天、魔、梵、沙門、婆羅門、天及世間人， 無能毀罵；飯食、牀臥具、病瘦醫藥，皆悉知足，亦復如是。復有四法，謂四攝法：惠施、愛 語、利人、等利。復有四法，謂四須陀洹支： 比丘於佛得無壞信，於法、於僧、於戒得無壞信。復有四法，謂四受證：見色受證、身受 滅證、念宿命證、知漏盡證。復有四法，謂四道：苦遲得、苦速得、樂遲得、樂速得。</h3><p id="38c547da-babc-48ee-a8e1-977fee9a2123" class="">17. There are another four things, which are four foundations of Dharma: The Dharma foundation of not craving, Dharma foundation of not being angry, Dharma foundation of right mindfulness, and Dharma foundation of right samādhi.</p><p id="873e6792-f8cd-4ecd-8649-8acdd2227362" class="">18. There are another four things, which are four noble clans: [1] Here, a <em>bhikṣu </em>is satisfied with their clothing. They are not pleased with obtaining fine clothes and not saddened when having ugly clothes. They are not defiled or attached, know what shouldn’t be done, and know the way to the escape. They are diligent and not negligent about these rules and accomplishes these things without fault or loss. They also teach people to accomplish these things. This is the first of the noble clan’s way of satisfied living. From the past until the present, they are never troubled. It’s impossible for gods like Māra or Brahmā, ascetics and priests, or spirits and worldly people to reproach them. <em>They are satisfied in the same way regarding [2] meals, [3] bedding, and [4] medicines for illness.</em></p><p id="08b86bed-95b4-4070-a0ad-1b8174af805d" class="">19. There are another four things, which are four means of unification (<em>catuḥ-saṃgraha-vastu</em>): Bestowing gifts, affectionate speech, benefiting others, and sharing benefits equally.</p><p id="34a5feba-c238-42e8-89bd-a57d6c1aa795" class="">20. There are another four things, which are four factors of stream entry: [1] A <em>bhikṣu </em>attains an unbreakable faith in the Buddha … [2] in the Dharma … [3] in the Saṅgha … [4] attains an unbreakable faith in the precepts.</p><p id="1b15da81-9c49-4015-bafb-a866ad3eb5a8" class="">21. There are another four things, which are four proofs: The proof of seeing forms, proof of the body’s cessation, proof of recollecting past lives, and proof of knowing the contaminants are ended.</p><p id="359cd515-01db-4417-9219-5d279700b4ff" class="">22. There are another four things, which are four paths: That obtained slowly with hardship, that obtained quickly with hardship, that obtained slowly and pleasantly, and that obtained quickly and pleasantly.</p><h3 id="80b01dd4-c5c9-442e-9c05-7b4e9b8a35d5" class="">「復有四法，謂四聖諦：苦聖諦、苦集聖諦、苦滅聖諦、 苦出要聖諦。復有四法，謂四沙門果：須陀洹 果、斯陀含果、阿那含果、阿羅漢果。復有四法， 謂四處：實處、施處、智處、止息處。復有四法， 謂四智：法智、未知智、等智、知他人心智。復有四法，謂四辯才：法辯、義辯、詞辯、應辯。復有四法，謂四識住處：色識住、緣色、住色，與愛俱增長，受、想、行識中亦如是住。復有四 法，謂四扼：欲扼、有扼、見扼、無明扼。復有四法，謂四無扼：無欲扼、無有扼、無見 扼、無無明扼。</h3><p id="8216a856-2ba1-4c8a-9b46-396e1f71a950" class="">23. There are another four things, which are four noble truths: The noble truth of suffering, the noble truth of suffering’s accumulation, the noble truth of suffering’s cessation, and the noble truth of the escape from suffering.</p><p id="8bc66afd-2197-44c7-9871-98e3947aefbf" class="">24. There are another four things, which are four fruits of an ascetic: The fruit of stream entry, fruit of once-returning, fruit of non-returning, and fruit of the arhat.</p><p id="f5ff6240-736f-4ce9-88b0-af3912ecbdfa" class="">25. There are another four things, which are four bases: The basis of truth, basis of generosity, basis of knowledge, and basis of calm.</p><p id="ce8127c5-0652-46f0-adbc-f0f4f259d001" class="">26. There are another four things, which are four knowledges: Dharma knowledge, knowledge not yet known, full knowledge, and knowledge of other people’s minds.</p><p id="21bbbf5b-98fa-4a58-bc32-78fa388cd7de" class="">27. There are another four things, which are four eloquences: Dharma eloquence, eloquence of meaning, eloquence of admonishment, and eloquence of advice. </p><p id="16406774-7faa-42cb-a63f-3b8a53033120" class="">28.  There are another four things, which are four abiding places (’stations’) of consciousness: Consciousness abiding in form, conditioned by form, remaining in form, and growing together with craving. <em>Consciousness abiding in</em> <em>[2] sensation, [3] perception, and [4] conditioning are likewise.</em></p><p id="e2ecd070-ae32-4b3d-b526-933dd221372f" class="">29. There are another four things, which are four yokes: The yoke of desire, yoke of existence, yoke of views, and yoke of ignorance.</p><p id="5b215561-2b95-4fbe-91a6-eddedac62e62" class="">30. There are another four things, which are four absent yokes: The absence of the yoke of desire, absence of the yoke of existence, absence of the yoke of views, and absence of the yoke of ignorance.</p><h3 id="497566ab-235a-4a1b-8f1f-7e7ebf936ed1" class="">「復有四法，謂四淨：戒淨、心淨、 見淨、度疑淨。復有四法，謂四知：可受知受、 可行知行、可樂知樂、可捨知捨。復有四 法，謂四威儀：可行知行、可住知住、可坐 知坐、可臥知臥。復有四法，謂四思惟：少思惟、廣思惟、無量思惟、無所有思惟。復有四法，謂四記論：決定記論，分別記論、詰問記 論、止住記論。復有四法，謂佛四不護法；如來身行清淨，無有闕漏，可自防護；口行清 淨、意行清淨、命行清淨，亦復如是。是為如 來所說正法，當共撰集，以防諍訟，使梵行 久立，多所饒益，天、人獲安。</h3><p id="1f7a6c36-bfeb-4bae-a0e3-f4cf6153b231" class="">31. There are another four things, which are four purities: Purity of precepts, purity of mind, purity of views, and purity of going beyond doubt.</p><p id="7a950fc8-c81a-49d9-959c-8f34616e29e8" class="">32. There are another four things, which are four recognitions: Recognizing what’s acceptable and accepting it, recognizing what’s practicable and practicing it, recognizing what’s enjoyable and enjoying it, and recognizing what’s rejectable and rejecting it. </p><p id="8902841f-6685-43a6-9ba2-463a23772e51" class="">33. There are another four things, which are four postures: Recognizing what’s walkable and walking, recognizing where one can stand and standing, recognizing what can be sat on and sitting, and recognizing what can be laid upon and lying down.</p><p id="d86db325-8d29-4b1a-bc6b-ae3091fdc137" class="">34. There are another four things, which are four intentions (<em>saṃkalpa</em>): slight intention, broad intention, measureless intention, and no intention whatsoever.</p><p id="0974ee93-495e-476b-b5cc-35f770b8f193" class="">35. There are another four things, which are four explanations: Definite explanation, analytical explanation, explanation by questioning, and explanation by setting it aside. </p><p id="5f14403f-1156-4dbe-8b2b-5f846c1a203e" class="">36. There are another four things, which are four things a buddha doesn’t guard against: [1] A Tathāgata’s physical conduct is pure and lacking any contamination to be guarded against. Their <em>[2] verbal conduct is pure, [3] mental conduct is pure, and [4] livelihood is pure in the same way.</em></p><p id="667d9d41-1f63-4e3e-bbec-999969a29a18" class="">“<em>Bhikṣus! </em>These are the correct teachings taught by the Tathāgata that we ought to compile together to safeguard them from dispute, establish the religious life for a long time, and benefit many people so that gods and people will obtain peace.</p><h3 id="21edc9be-892d-42fe-a5e2-0fb8b8d1c0cd" class="">「又，諸比丘！如來 說五正法，謂五入：眼色、耳聲、鼻香、舌味、身觸。 復有五法，謂五受陰：色受陰，受、想、行、識受 陰。復有五法，謂五蓋：貪欲蓋、瞋恚蓋、睡眠蓋、 掉戲蓋、疑蓋。復有五法，謂五下結：身見結、 戒盜結、疑結、貪欲結、瞋恚結。復有五法，謂五 上結：色愛、無色愛、無明、慢、掉。復有五法，謂五根：信根、精進根、念根、定根、慧根。復有五法， 謂五力：信力、精進力、念力、定力、慧力。</h3><p id="6e33204d-a9cb-4433-ad4b-6923c5fcdaf3" class="">1. “Moreover, <em>Bhikṣus</em>! <em>T</em>he Tathāgata has taught five correct things, which are the five senses (lit. ‘entrances’): The eye and images, ear and sounds, nose and odors, tongue and flavors, and body and touches.</p><p id="dc10ec49-afea-47b9-b658-51e52716b544" class="">2. There are another five things, which are the five acquired aggregates: The acquired aggregate of form … sensation … perception … conditioning, and the acquired aggregate of consciousness.</p><p id="22c2ed67-4c3b-42d9-bbd7-18d9b8454f66" class="">3. There are another five things, which are the five hindrances (lit. ‘covering’ <em>nīvaraṇa</em>): The hindrance of desire, hindrance of anger, hindrance of sleepiness, hindrance of agitation, and hindrance of doubt.</p><p id="1c6038d2-3bc0-43a3-9e55-24692996d9a7" class="">4. There are another five things, which are the five bonds of the lower [realms]: The bond of personality view (<em>satkāya-dṛṣṭi</em>), bond of misapplied precepts, bond of doubt, bond of desire, and bond of anger.</p><p id="6d845e4b-49d1-463b-84c7-4fde5bbd5659" class="">5. There are another five things, which are the five bonds of the higher [realms]: Craving of form, craving of formlessness, ignorance, pride, and agitation.</p><p id="b08381f7-b5cb-4a13-969c-b05221976e78" class="">6. There are another five things, which are the five faculties: The faculty of faith, faculty of effort, faculty of mindfulness, faculty of samādhi, and faculty of wisdom. </p><p id="ad05104f-1cf6-45db-a95f-dd4d1ab125d2" class="">7. There are another five things, which are the five powers: Power of faith, power of effort, power of mindfulness, power of samādhi, and power of wisdom.</p><h3 id="2dd1a6f4-415a-4309-bd4c-0b692b4dd135" class="">「復有五 法，謂滅盡枝：一者比丘信佛、如來、至真、等 正覺，十號具足。二者比丘無病，身常安 隱 。 三者質直無有諛諂，能如是者，如來則示 涅槃徑路。四者自專其心，使不錯亂，昔所 諷誦，憶持不忘。五者善於觀察法之起滅， 以賢聖行，盡於苦本。復有五法，謂五發：非 時發、虛發、非義發、虛言發、無慈發。復有五法， 謂五善發：時發、實發、義發、和言發、慈心發。復有五法，謂五憎嫉：住處憎嫉、檀越憎嫉、利養 憎嫉、色憎嫉、法憎嫉。</h3><p id="a860481c-1ab2-488d-85e3-520601142017" class="">8. There are another five things, which are the five factors of complete cessation: First, a <em>bhikṣu </em>believes in the Buddha, Tathāgata, Arhat, and Completely Awakened One who perfected the ten epithets. Second, they lack illness and are physically healthy. Third, they are honest, lack any deception, and head down the Tathāgata’s clear path to nirvāṇa. Fourth, they focus the mind so that they are not confused, retain the recitations, and do not forget them. Fifth, they are skilled in observing the arising and perishing of things and ends the root of suffering with the noble practice. </p><p id="42e59b3e-85cf-4bf9-b30e-f9b8d337de9e" class="">9. There are another five things, which are five issuances [of rebuke]: Untimely issuance, false issuance, meaningless issuance, issuance of vain words, and unkind issuance.</p><p id="4ccc573c-3a7d-404e-a19d-2cb7cbb491fd" class="">10. There are another five things, which are five skillful issuances [of rebuke]: timely issuance, true issuance, meaningful issuance, issuance with gentle words, and kind issuance.</p><p id="29f339a0-dc52-4ef0-a14a-88689314ffdd" class="">11. There are another five things, which are five hatreds: Hatred of a residence, hatred of a donor, hatred of profit, hatred of form, and hatred of teachings.</p><h3 id="9932261e-9473-4c91-9b6a-fd0312f078c4" class="">「復有五法，謂五趣解脫：一者身不淨想，二者食不淨想，三者一切 行無常想，四者一切世間不可樂想，五者死想。復有五法，謂五出要界：一者比丘於欲 不樂、不動，亦不親近，但念出要，樂於遠離， 親近不怠，其心調柔，出要離欲，彼所因欲起 諸漏纏，亦盡捨滅而得解脫，是為欲出要。 瞋恚出要、嫉妬出要、色出要、身見出要，亦復如是。</h3><p id="e0503a7e-b524-4f83-9468-a850c6a77db3" class="">12. There are another five things, which are five ways to head for liberation: First is the perception that the body is impure, second is the perception that food is impure, third is the perception that all conditionings (<em>saṃskāra</em>) are impermanent, fourth is the concept that all worlds are unpleasing, and first is the perception of death.</p><p id="2e89471b-6131-41dd-95c1-109f51512eed" class="">13. There are another five things, which are five spheres of escape: [1] A <em>bhikṣu </em>does not enjoy, isn’t moved by, and does not stay near desires. They are only mindful of escaping them, enjoy seclusion, and befriend those who are not indolent. Their mind is flexible, leaving and parting with desire and what causes the desires that produce the web of contaminants. They also end, abandon, and cease them to attain liberation. This is the sphere of escape from desire. There is the sphere of <em>[2] escape from anger, [3] escape from jealousy, [4] escape from form, and [5] escape from personality view, which are likewise.</em></p><h3 id="190b5d19-6e7d-474c-a9b0-c2becbbac326" class="">「復有五法，謂五喜解脫入。若比丘精 勤不懈，樂閑靜處，專念一心，未解得解，未 盡得盡，未安得安。何謂五？於是，比丘聞如 來說法，或聞梵行者說，或聞師長說法，思惟觀察，分別法義，心得歡喜，得歡喜已，得 法愛，得法愛已，身心安隱，身心安隱已，則 得禪定，得禪定已，得實知見，是為初解脫 入。於是，比丘聞法喜已，受持諷誦，亦復歡 喜，為他人說，亦復歡喜，思惟分別，亦復歡 喜，於法得定，亦復如是。復有五法，謂五人： 中般涅槃、生般涅槃、無行般涅槃、有行般涅槃、上流阿迦尼吒。諸比丘！是為如來所說 正法，當共撰集，以防諍訟，使梵行久立，多 所饒益，天、人獲安。</h3><p id="b00b285f-be03-44bd-b046-9cf3fd6bf523" class="">14. There are another five things, which are five kinds of joy from entering liberation: If a <em>bhikṣu </em>is diligent and not negligent, happily lives in seclusion, focuses their attention, and unifies the mind, they will understand what they do not yet understand, end what they have not yet ended, and become peaceful where they are not yet peaceful. What are the five? [1] Here, a <em>bhikṣu </em>hears the Tathāgata teach the Dharma, hears a religious practitioner teach it, or hears a senior teacher teach the Dharma. They contemplate, investigate, and discern the meaning of that Dharma, and their mind becomes joyous. After the mind becomes joyous, they attain the love of Dharma. After attaining the love of Dharma, they are comfortable in body and mind. After they are comfortable in body and mind, then they attain the <em>samādhi </em>of <em>dhyāna</em>. After attaining the <em>samādhi</em> of <em>dhyāna</em>, they attain true knowing and seeing. This is the first way to enter liberation. [2] Here, after a <em>bhikṣu </em>hears Dharma and rejoices, they accept, retain, and recite it, [3] rejoice and teach it for other people, [4] rejoice, contemplate, and discern it, [5] rejoicing and attaining samādhi regarding the Dharma in the same way.</p><p id="e0bf1dca-e2c9-4fed-b2f6-b339e76d6e1d" class="">15. There are another five things, which are five people (never-returners?): [Those] within <em>parinirvāṇa</em>, arising <em>parinirvāṇa</em>, unconditioned <em>parinirvāṇa</em>, conditioned <em>parinirvāṇa</em>, and <em>parinirvāṇa </em>upstream of Akaniṣṭha.</p><p id="f62a8850-4590-412f-8176-2977fb5364c0" class=""><em>Bhikṣus</em>! These are the correct teachings taught by the Tathāgata that we ought to compile together to safeguard them from dispute, establish the religious life for a long time, and benefit many people so that gods and people will obtain peace.</p><h3 id="22bb519b-b5a0-41c1-ae31-67edeed10e8c" class="">「又，諸比丘！如來說六正 法，謂內六入：眼入、耳入、鼻入、舌入、身入、意入。 復有六法，謂外六入：色入、聲入、香入、味入、觸 入、法入。復有六法，謂六識身：眼識身，耳、鼻、 舌、身、意識身。復有六法，謂六觸身：眼觸身， 耳、鼻、舌、身、意觸身。復有六法，謂六受身：眼受 身，耳、鼻、舌、身、意受身。復有六法，謂六想身： 色想、聲想、香想、 味 想、觸想、法想。復有六法， 謂六思身：色思、聲思、香思、味思、觸思、法思。 復有六法，謂六愛身：色愛身，聲、香、味、觸、法愛 身。復有六法， 謂 六諍本：若比丘好瞋不捨， 不敬如來，亦不敬法，亦不敬眾，於戒穿 漏，染汙不淨；好於眾中多生 諍 訟，人所憎 惡，嬈亂淨眾，天、人不安。諸比丘！汝等當自內觀，設有瞋恨，如彼嬈亂者，當集和合眾，廣設方便，拔此諍本；汝等又當專念自觀，若結恨已滅，當更方便，遮止其心，勿復 使起。諸比丘！佷戾不諦、慳恡嫉妬、巧偽虛 妄、自因己見、謬受不捨、迷於邪見、與邊 見俱，亦復如是。復有六法，謂六界：地界、火 界、水界、風界、空界、識界。復有六法，謂六察行： 眼察色，耳聲、鼻香、舌味、身觸、意察法。</h3><p id="f0059d67-e20c-40dc-8750-bf96b3aea505" class="">1. Moreover, monks, the Tathāgata has taught six correct things, which are the six internal senses (lit. ‘entrances’): The eye sense, ear sense, nose sense, tongue sense, body sense, and mind sense.</p><p id="75769879-6e1d-406c-bfa8-cb3e10109d99" class="">2. There are another six things, which are six external senses: The sense of images, sense of sounds, sense of odors, sense of flavors, sense of touches, and sense of notions.</p><p id="40a87e80-7d35-4ea6-9f91-0b2448944819" class="">3. There are another six things, which are the six ‘bodies’ of consciousness: The body of visual consciousness … auditory … olfactory … gustatory … somatic … body of mental consciousness.</p><p id="89e2dd14-2418-4087-b3d6-ea2a4d9d98f5" class="">4. There are another six things, which are six groups of contact: The group of visual contact … auditory … olfactory … gustatory … somatic … group of mental contact.</p><p id="404dd62d-ff85-40f6-b130-b5dc18880a68" class="">5. There are another six things, which are six groups of sensations: The group of visual sensation… auditory … olfactory … gustatory … somatic … group of mental sensation.</p><p id="2018c51e-ff62-4a92-bff5-b49af634a88e" class="">6. There are another six things, which are six bodies of perception: [The body of] image perception … sound perception … odor perception… flavor perception… touch perception, and [body of] idea perception.</p><p id="130bc209-09ff-42c1-83f3-3a7bc71b853d" class="">7. There are another six things, which are six bodies of thought: [The body of] image thought… sound thought… odor thought… flavor thought… touch thought, and [body of] idea thought.</p><p id="0a99c660-f765-40d3-9c91-8f8efc695ccf" class="">8. There are another six things, which are six groups of craving: The group of image craving … sound … odor … flavor … touch … group of notion craving.</p><p id="fa0f2f48-57f1-479c-a932-a00e5f59652c" class="">9. There are another six things, which are six sources of conflict: [1] If a <em>bhikṣu </em>is extremely angry and doesn’t let it go, he doesn’t respect the Tathāgata, doesn’t respect the Dharma, and doesn’t respect the Saṅgha. His precepts are breached, and he’s defiled and impure. When he creates many conflicts in the Saṅgha, he’s disliked by people, disrupts the pure assembly, and gods and people don’t attain peace. <em>Bhikṣus</em>! You must look within yourselves. If you find resentments like those that are disruptive, you must gather as a unified assembly and employ broad methods to root out these sources of conflict. Moreover, you must focus your attention and observe yourselves. If the bond of resentment has ceased, you should employ methods to restrain your minds. Don’t let it arise again. <em>Bhikṣus</em>! <em>[2] wayward dishonesty, [3] stingy jealousy, [4] fraud and falsehoods, [5] not abandoning mistakes because of one’s own views, and [6] being deluded by wrong and extreme views are likewise.</em></p><p id="dcf33865-6f3b-4fc0-bdec-772d41a3e663" class="">10. There are another six things, which are six elements: The earth element, fire element, water element, air element, space element, and consciousness element.</p><p id="ba216182-2b4e-4f84-97b9-0d55c573f3f1" class="">11. There are another six things, which are six observations: The eye observing visible forms, the ear observing sounds, nose … odors, tongue … flavors, body … touches, mind observing <em>dharmas</em>.</p><h3 id="0c969fa8-4bf5-45b0-bbad-8a7f46e1cc5c" class="">「復有 六法，謂六出要界。若比丘作是言：『我修慈 心，更生瞋恚。』餘比丘語言：『汝勿作此言，勿 謗如來，如來不作是說：欲使修慈解脫， 更生瞋恚想，無有是處。佛言：除瞋恚已，然 後得慈。』若比丘言：『我行悲解脫，生憎嫉心； 行喜解脫，生憂惱心；行捨解脫，生憎愛心； 行無我行，生狐疑心；行無想行，生眾亂想。』 亦復如是。復有六法，謂六無上：見無上、聞無 上、利養無上、戒無上、恭敬無上、憶念無上。復 有六法，謂六思念：佛念、法念、僧念、戒念、施念、 天念。是為如來所說正法，當共撰集，以防諍 訟，使梵行久立，多所饒益，天、人獲安。</h3><p id="e779a4bb-b124-4288-8395-015c14e9e9f9" class="">12. There are another six things, which are six spheres of escape: [1] Suppose a <em>bhikṣu </em>says, ‘I would cultivate kindness, but then I become angry.’ The other <em>bhikṣus </em>say, ‘Don’t say that! Don’t misrepresent the Tathāgata. The Tathāgata doesn’t say, “I’d like to cultivate the liberation of kindness, but then notions of anger arise.” That’s impossible. The Buddha says, “Once anger is gone, then one becomes kind afterward.” [2] Suppose a <em>bhikṣu </em>says, ‘I would practice the liberation of compassion, but then I have hateful thoughts.’… [3] ‘practice the liberation of joy, but then I have sorrowful thoughts.’ … [4] ‘practice the liberation of equanimity, but then I have thoughts of like or dislike.’ … [5] ‘cultivate the practice of non-self, but then I have suspicious thoughts’ … [6] ‘cultivate the practice without conception, but then I have many distracting notions.’ <em>Those cases are likewise.</em></p><p id="93eb0582-1860-4ebd-b9f7-0ccc4e21563e" class="">13. There are another six things, which are six unsurpassed things: Vision that’s unsurpassed, learning that’s unsurpassed, support that’s unsurpassed, precepts that are unsurpassed, respect that’s unsurpassed, and memory that’s unsurpassed.</p><p id="19c64514-a268-4c48-8283-248bd1a354a8" class="">14. There are another six things, which are six recollections: Recollection of the Buddha, recollection of the Dharma, recollection of the Saṅgha, recollection of precepts, recollection of generosity, and recollection of the gods.</p><p id="e5549cb8-df0c-4cb8-82fe-67b440dd08af" class=""><em>Bhikṣus</em>! These are the correct teachings taught by the Tathāgata that we ought to compile together to safeguard them from dispute, establish the religious life for a long time, and benefit many people so that gods and people will obtain peace.”</p><h3 id="cfb92dee-6660-450d-b945-24521221e4a8" class="">「諸比丘！如來說七正法，謂七非法：無信、無慙、無愧、 少聞、懈怠、多忘、無智。復有七法，謂七正法：有信、有慚、有愧、多聞、精進、總持、多智。復有七法， 謂七識住：或有眾生，若干種身，若干種想，天 及人是，是初識住；或有眾生，若干種身而一 想者，梵光音天最初生時是，是二識住；或有 眾生，一身若干種想，光音天是，是三識住；或 有眾生，一身一想，遍淨天是，是四識住；或有眾生，空處住、識處住、不用處住。</h3><p id="086dd904-0d86-4e26-8acc-342028c613d7" class="">1. “<em>Bhikṣus</em>! The Tathāgata has taught seven correct things, which are seven things that aren’t Dharma: Lack of faith, lack of conscience (<em>āhrīkya</em>), lack of modesty (<em>anapatrapā</em>), little learning, negligence, forgetfulness, and lack of knowledge.</p><p id="4ced2841-d352-4649-90f3-2e213d16d690" class="">2. There are another seven things, which are seven correct Dharmas: Having faith, having conscience, having modesty, being well-versed, making effort, good memory, and being knowledgeable.</p><p id="77250b37-bb97-4f9a-9d32-cd84b1b2af7d" class="">3. There are another seven things, which are seven abodes of consciousness: [1] Sometimes, sentient beings have either diverse bodies or diverse notions. These gods and humans are the first abode of consciousness. [2] Sometimes, sentient beings might have diverse bodies but the same notions. When the Brahmas of the Ābhāsvara Heaven are first born there, that’s the second abode of consciousness. [3] Sometimes, sentient beings have the same bodies but might have diverse notions. These Ābhāsvara gods are the third abode of consciousness. [4] Sometimes, sentient beings have the same bodies and the same notions. These Śubhakṛtsnā gods are the fourth abode of consciousness. [5] Sometimes, sentient beings dwell in the abode of space … [6] dwell in the abode of consciousness … [7] dwell in the abode of nothingness …</p><h3 id="d4cd207c-5811-444f-bca4-b293f8f8abbe" class="">「復有七法，謂七勤法：一者比丘勤於戒行，二者勤 滅貪欲，三者勤破邪見，四者勤於多聞，五者勤於精進，六者勤於正念，七者勤於禪定。復有七法，謂七想：不淨想、食不淨想、一 切世間不可樂想，無想、無常想、無常苦想、 苦無我想。復有七法，謂七三昧具：正見、正思、 正語、正業、正命、正方便、正念。復有七法，謂七 覺意：念覺意、法覺意、精進覺意、喜覺意、猗覺意、定覺意、護覺意。是為如來所說正法，當共 撰集，以防諍訟，使梵行久立，多所饒益，天、 人獲安。</h3><p id="ac2795f4-70b0-4a73-b2b3-2f4ff9372340" class="">4. There are another seven things, which are seven vigors (<em>vīrya</em>): First, a <em>bhikṣu </em>is vigorous in practicing the precepts. Second, they are vigorous in ceasing desires. Third, they are vigorous in refuting wrong views. Fourth, they vigorously learn much. Fifth, their vigor (<em>vīrya</em>) is vigorous. Sixth, they are vigorous in correct mindfulness. Seventh, they are vigorous in <em>dhyāna</em>.</p><p id="d2fd8dea-54bd-4622-937d-fb1cd32e1b69" class="">5. There are another seven things, which are seven perceptions: The perception of impurity, the perception that food is impure, the perception that all the world is not pleasing, the perception of nothingness, the perception of impermanence, the perception of the suffering of impermanence, and the perception of the lack of self in suffering.</p><p id="5c2dff24-38ef-44d4-9f95-c720a066b9ff" class="">6. There are another seven things, which are seven requisites of <em>samādhi</em>: Right view, right intention, right speech, right action, right livelihood, right <em>upāya</em>, and right mindfulness.</p><p id="c77e4cba-3a1f-487c-b32b-f25e40286b81" class="">7. There are another seven things, which are seven factors of awakening: The awakening factor of mindfulness, awakening factor of <em>dharmas</em>, awakening factor of <em>vīrya</em>, awakening factor of joy, awakening factor of calm, awakening factor of <em>samādhi</em>, and awakening factor of guardianship.</p><p id="037784c4-e42e-431d-bea2-2bc85d59df62" class=""><em>Bhikṣus</em>! These are the correct teachings taught by the Tathāgata that we ought to compile together to safeguard them from dispute, establish the religious life for a long time, and benefit many people so that gods and people will obtain peace.</p><h3 id="1a3e9748-3b9b-4fe6-a013-97a606c4f677" class="">「諸比丘！如來說八正法，謂世八法： 利、衰、毀、譽、稱、譏、苦、樂。復有八法，謂八解脫：色觀色，一解脫；內無色想觀外色，二解脫；淨解脫， 三解脫；度色想滅瞋恚想住空處解脫，四解 脫；度空處住識處，五解脫；度識處住不用處， 六解脫；度不用處住有想無想處，七解脫；度有想無想處住想知滅，八解脫。復有八法，謂 八聖道：正見、正志、正語、正業、正命、正方便、正 念、正定。復有八法，謂八人：須陀洹向、須陀洹、 斯陀含向、斯陀含、阿那含向、阿那含、阿羅漢 向、阿羅漢。是為如來所說正法，當共撰集， 以防諍訟，使梵行久立，多所饒益，天、人獲 安。</h3><p id="8d11d7d7-3c60-43f7-8f4a-15af52cd4651" class="">1. “<em>Bhikṣus</em>! The Tathāgata has taught eight correct things, which are eight <em>dharmas</em> of the world: Prosperity, decline, censure, praise, admiration, blame, pain, and pleasure.</p><p id="f68b8081-b907-49e3-8cf4-834a645f1e15" class="">2. There are another eight things, which are the eight liberations (<em>vimokṣa</em>): Form observed as form is the first liberation. Observing external form without internal perceptions of form is the second liberation. The liberation of purity is the third liberation. Going beyond notions of form, ceasing notions of anger, and abiding in the abode of space is the fourth liberation. Going beyond the abode of space and abiding in the abode of consciousness is the fifth liberation. Going beyond the abode of consciousness and abiding in the abode of nothingness is the sixth liberation. Going beyond the abode of nothingness and abiding in the abode of neither perception nor non-perception is the seventh liberation. Going beyond the abode of neither perception nor non-perception and abiding in the knowledge of the cessation perceptions is the eighth liberation.</p><p id="903e0a79-4e88-4a38-84b9-107e2889070a" class="">3. There are another eight things which are the noble eightfold path: Right view, right intention, right speech, right action, right livelihood, right <em>upāya</em>, right mindfulness, and right samādhi.</p><p id="cfbf3dbe-6c75-4f54-8787-b20d63ef776c" class="">4. There are another eight things, which are the eight persons: Those headed for stream entry and stream entrants, those headed for once-returning and once-returners, those headed for non-returning and non-returners, and those headed to becoming arhats and arhats.</p><p id="29a893fd-775c-48d7-88c0-383ad3e5bd9c" class=""><em>Bhikṣus</em>! These are the correct teachings taught by the Tathāgata that we ought to compile together to safeguard them from dispute, establish the religious life for a long time, and benefit many people so that gods and people will obtain peace.</p><h3 id="df3e3f0f-2c61-45f3-a914-974acba6f0b6" class="">「諸比丘！如來說九正法，所謂九眾生居： 或有眾生，若干種身，若干種想，天及人是，是初眾生居；復有眾生，若干種身而一想者，梵 光音天最初生時是，是二眾生居；復有眾生， 一身若干種想，光音天是，是三眾生居；復有 眾生，一身一想，遍淨天是，是四眾生居；復 有眾生，無想無所覺知，無想天是，是五眾生 居；復有眾生，空處住，是六眾生居；復有眾 生，識處住，是七眾生居；復有眾生，不用處 住，是八眾生居；復有眾生，住有想無想處， 是九眾生居。是為如來所說正法，當共撰集， 以防諍訟，使梵行久立，多所饒益，天、人獲 安。</h3><p id="28f3d5da-b318-42ad-9788-752200705644" class="">1. <em>Bhikṣus</em>! The Tathāgata has taught nine correct things, which are nine abodes of sentient beings: Some sentient beings have diverse bodies and diverse notions. These gods and humans are the first abode of sentient beings. Some sentient beings have diverse bodies but the same notions. When the Brahmas of the Ābhāsvara Heaven are first born there, that’s the second abode of sentient beings. Some sentient beings have the same bodies but diverse notions. This Ābhāsvara Heaven is the third abode of sentient beings. Some sentient beings have the same bodies and the same notions. This Śubhakṛtsnā Heaven is the fourth abode of sentient beings. Some sentient beings lack conception or anything to perceive. This Asāṃjñika Heaven is the fifth abode of sentient beings. Some sentient beings dwell in the abode of space, which is the sixth abode of sentient beings. Some sentient beings dwell in the abode of consciousness, which is the seventh abode of sentient beings. Some sentient beings dwell in the abode of nothingness, which is the eighth abode of sentient beings. Some sentient beings dwell in the abode with and without conception, which is the ninth abode of sentient beings.</p><p id="02f91217-a762-4ac0-89d0-f03e2946366e" class="">“These are the correct teachings taught by the Tathāgata that we ought to compile together to safeguard them from dispute, establish the religious life for a long time, and benefit many people so that gods and people will obtain peace.</p><h3 id="f4257c5f-4e0e-4b5b-b146-7d06ede841c9" class="">「諸比丘！如來說十正法，所謂十無學法， 無學正見、正思、正語、正業、正命、正念、正方便、正 定、正智、正解脫。是為如來所說正法，當共撰 集，以防諍訟，使梵行久立，多所饒益，天、人 獲安。」</h3><p id="d1bf20fd-e73d-42b6-b0c9-fc2b260fdc07" class="">1. “<em>Bhikṣus</em>! The Tathāgata has taught ten correct things, which are ten ways of having nothing more to learn: Having nothing more to learn about right view … right intention … right speech … right action … right livelihood … right mindfulness … right <em>upāya </em>… right samādhi … right knowledge … right liberation. </p><p id="a5a30a6a-1a89-42f0-8268-63019463a975" class="">These are the correct teachings taught by the Tathāgata that we ought to compile together to safeguard them from dispute, establish the religious life for a long time, and benefit many people so that gods and people will obtain peace.”</p><h3 id="34462ec9-63c3-4c36-a46f-d8c095de1ab1" class="">爾時，世尊印可舍利弗所說。時，諸比丘 聞舍利弗所說，歡喜奉行。</h3><p id="f560cc9e-d4cd-4203-a094-ab2378dd4fcb" class="">At that point, the World-Honored One gave his approval of what Śāriputra had taught. When the monks heard what Śāriputra taught, they rejoiced and approved.</p><p id="82930d1a-a055-47d8-83da-12572a095d54" class="">
+</p><p id="738a0434-f8be-4c9e-9ad4-9ae7dcc46cc8" class=""><strong>佛說長阿含經卷第八</strong></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
